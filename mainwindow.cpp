@@ -17,7 +17,7 @@ MainWindow::MainWindow(QWidget *parent)
 
 
     // create a QSlider object and move it to fit the label's height + 30 px
-    sld = new QSlider();
+    sld = new QSlider(parent);
     ui->sld->setSliderPosition(0);
     ui->sld->resize(ui->lbl->width(), 30);
     ui->sld->move(20, ui->lbl->height() + 20);
@@ -26,7 +26,7 @@ MainWindow::MainWindow(QWidget *parent)
 
 
     // create a QPushButton object (button)
-    button = new QPushButton("OPEN");
+    button = new QPushButton("OPEN", parent);
     ui->button->resize(ui->lbl->width(), 30);
     ui->button->move(20, ui->lbl->height() + 60);
 
